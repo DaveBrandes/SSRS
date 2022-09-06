@@ -84,7 +84,8 @@ if __name__ == '__main__':
         sim = Simulator(cfg)
 
         sim.plot_terrain_features()
-        sim.plot_orographic_updrafts()
+        #sim.plot_orographic_updrafts()
+        #sim.plot_sm_orographic_updrafts()
         sim.plot_thermal_updrafts()
         #sim.plot_wtk_layers()
         #sim.plot_directional_potentials()
