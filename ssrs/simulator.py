@@ -486,6 +486,7 @@ class Simulator(Config):
             self.resolution
         )
         starting_locs = [[x, y] for x, y in zip(starting_rows, starting_cols)]
+        #print(f'shape of starting locs is {np.shape(starting_locs)}')
         if PAM_stdev == 0:
             dir_offsets = np.zeros(len(starting_locs))
         else:
@@ -493,7 +494,8 @@ class Simulator(Config):
                                            size=len(starting_locs))
         self.PAM = self.track_direction + dir_offsets
         starting_locs_PAM = list(zip(starting_rows, starting_cols, self.PAM))
-
+        #print(f'shape of starting locs PAM is {np.shape(starting_locs_PAM)}')
+        
         num_cores = min(self.track_count, self.max_cores)
        
         for case_id in self.case_ids:
