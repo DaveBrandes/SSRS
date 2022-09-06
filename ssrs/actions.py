@@ -348,7 +348,7 @@ def searcharc_w(trajectory,directions,track_weight,PAM,wo_interp,wt_interp,elev_
     check_wt = wt_interp(search_x, search_y, grid=False)
     check_wtot=check_wo+check_wt
     check_elev=elev_interp(search_x,search_y, grid=False)
-    
+    #print(f'shape of search_arc is {np.shape(search_arc)}')
     wo_sorted=-np.sort(-check_wo)
     id_wosorted=check_wo.argsort()[-2:][::-1]   #return top two wo values of wo
     wo_max1=wo_sorted[0]
